@@ -7,7 +7,7 @@ deploy:
   provider: heroku
   api_key:
     secure: $HEROKU_KEY
-  app: conhecimento-livre-dev
+  app: projeto-ecommerce-staging
 
 notifications:
   slack:
