@@ -9,7 +9,6 @@ app.set('view engine', 'handlebars');
 
 app.set('port', (process.env.PORT || 3000))
 
-
 app.get('/', (req,res) => {
   const products = [{name: "Vassoura",
               price: "10",
@@ -17,11 +16,8 @@ app.get('/', (req,res) => {
               {name: "Abajur",
               price: "15",
               quantity: "1"}]
-
-
-res.render('index')
+  res.render('index', {products})
 })
-
 
 app.listen(app.get('port'), () =>
 console.log(`Node app is running on port ${app.get('port')}`))
