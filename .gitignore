@@ -71,3 +71,6 @@ bulma.css
 .sass-cache
 .retire-cache
 *.swp
+
+#node_modules
+./node_modules
