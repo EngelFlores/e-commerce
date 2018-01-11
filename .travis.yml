@@ -1,0 +1,14 @@
+language: node_js
+
+node_js:
+  - "6"
+
+deploy:
+  provider: heroku
+  api_key:
+    secure: $HEROKU_KEY
+  app: projeto-ecommerce-staging
+
+notifications:
+  slack:
+    on_success: change
