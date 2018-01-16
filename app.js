@@ -2,6 +2,7 @@ const express = require('express')
 const exphbs  = require('express-handlebars')
 const sendString = require('./sendString')
 const mockedData = require('./utilities/mockedData')
+const verifyDisponibility = require('./utilities/verifyDisponibility')
 const app = express()
 
 app.use(express.static(__dirname + '/views'))
@@ -11,7 +12,7 @@ app.set('view engine', 'handlebars')
 app.set('port', (process.env.PORT || 3000))
 
 app.get('/', (req,res) => {
-  products = mockedData
+  products = verifyDisponibility(mockedData())  
   res.render('index', {products})
 })
 

@@ -14,6 +14,11 @@ describe('mockedData', () => {
         name: "Abajur",
         price: "15",
         quantity: "1"
+      },
+      {
+        name: "Mesa",
+        price: "5",
+        quantity: "0"
       }
     ])
   })
