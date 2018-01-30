@@ -1,6 +1,6 @@
 const chai = require('chai')
 const expect = chai.expect
-const verifyDisponibility = require('../utilities/verifyDisponibility')
+const verifyDisponibility = require('../src/utilities/verifyDisponibility')
 
 
 describe('verifyDisponibility', () => {

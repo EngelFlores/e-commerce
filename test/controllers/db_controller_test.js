@@ -15,7 +15,7 @@ allDbMethods = dbController(mockedModel)
 
 describe('dbController', () => {
   it('findAll chama find na model', () => {
-    allDbMethods.find()
+    allDbMethods.findAll()
     expect(mockedModel.find).to.have.been.called
   })
 })

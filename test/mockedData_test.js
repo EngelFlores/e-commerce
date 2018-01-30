@@ -1,6 +1,6 @@
 const chai = require('chai')
 const expect = chai.expect
-const mockedData = require('../utilities/mockedData')
+const mockedData = require('../src/utilities/mockedData')
 
 describe('mockedData', () => {
   it('retorna array de objetos', () => {
