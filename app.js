@@ -2,7 +2,6 @@ const express = require('express')
 const exphbs  = require('express-handlebars')
 const mongoose = require('mongoose')
 const Product = require('./src/models/Product');
-const mockedData = require('./src/utilities/mockedData')
 const verifyDisponibility = require('./src/utilities/verifyDisponibility')
 const dbController = require('./src/controllers/db_controller')
 
@@ -20,7 +19,10 @@ app.get('/', (req, res, next) => {
   productsController = dbController(Product)
 
   productsController.findAll()
-    .then(products => res.render('index', {products}))
+    .then(allProducts => {
+      products = verifyDisponibility(allProducts)
+    })
+    .then(() => res.render('index', {products}))
     .catch(err => {
       console.log(err)
       next()
